@@ -213,7 +213,7 @@ const ReportsPage = () => {
 
   /* ciudad */
   const obtenerciudades = () => {
-    axios.get('http://192.188.58.82:3000/api/reportes/obtenerCiudades') //api obtener ciudades
+    axios.get('http://10.3.0.251:3000/api/reportes/obtenerCiudades') //api obtener ciudades
       .then(response => { setCiudades(response.data.data); if (primeraVez) { setSelectedCiudad(response.data.data[0]) } })
       .catch(error => { console.error(error); });
   }
@@ -236,7 +236,7 @@ const ReportsPage = () => {
   };
 
   const obtenerBarrios = (ciudad: any) => {
-    axios.post('http://192.188.58.82:3000/api/reportes/obtenerBarrios', { ciudad })
+    axios.post('http://10.3.0.251:3000/api/reportes/obtenerBarrios', { ciudad })
       .then(response => { setBarrios(response.data.data); })
       .catch(error => { console.error(error); });
   }
@@ -247,7 +247,7 @@ const ReportsPage = () => {
     await generearGraficos()
   };
   const obtenerEmergencias = (ciudad: any, barrio: any) => {
-    axios.post('http://192.188.58.82:3000/api/reportes/obtenerEmergencias', { ciudad, barrio })
+    axios.post('http://10.3.0.251:3000/api/reportes/obtenerEmergencias', { ciudad, barrio })
       .then(response => { setEmergencias(response.data.data); })
       .catch(error => { console.error(error); });
   };
@@ -259,7 +259,7 @@ const ReportsPage = () => {
   };
 
   const obtenerAnios = (ciudad: any, barrio: any, titulo: any) => {
-    axios.post('http://192.188.58.82:3000/api/reportes/obtenerAnios', { ciudad, barrio, titulo })
+    axios.post('http://10.3.0.251:3000/api/reportes/obtenerAnios', { ciudad, barrio, titulo })
       .then(response => {
         setAnios(response.data.data);
       })
@@ -294,7 +294,7 @@ const ReportsPage = () => {
   }
 
   const obtenerReporteBarras = (ciudad: any, barrio: any, titulo: any, fechaInicio: any, fechaFin: any, horaInicio: any, horaFin: any) => {
-    axios.post('http://192.188.58.82:3000/api/reportes/obtenerReporteBarras', { ciudad, barrio, titulo, fechaInicio, fechaFin, horaInicio, horaFin })
+    axios.post('http://10.3.0.251:3000/api/reportes/obtenerReporteBarras', { ciudad, barrio, titulo, fechaInicio, fechaFin, horaInicio, horaFin })
       .then(response => {
         setDataBarrasNumber(response.data.data);
         console.log(response.data.data);
@@ -342,7 +342,7 @@ const ReportsPage = () => {
 
   const obtenerReportPastel = (ciudad: any, barrio: any, titulo: any, fechaInicio: any, fechaFin: any, horaInicio: any, horaFin: any) => {
 
-    axios.post('http://192.188.58.82:3000/api/reportes/obtenerReportePastel', { ciudad, barrio, titulo, fechaInicio, fechaFin, horaInicio, horaFin })
+    axios.post('http://10.3.0.251:3000/api/reportes/obtenerReportePastel', { ciudad, barrio, titulo, fechaInicio, fechaFin, horaInicio, horaFin })
       .then(response => {/* setDataBarrasNumber(response.data.data); */
         const values: any = Object.keys(response.data.data);
         const conteos: any = Object.values(response.data.data);
@@ -612,7 +612,7 @@ const ReportsPage = () => {
 
 
   const obtenerMapaCalor = (ciudad: any, barrio: any, titulo: any, fechaInicio: any, fechaFin: any, horaInicio: any, horaFin: any) => {
-    axios.post('http://192.188.58.82:3000/api/reportes/obtenerMapaCalor', { ciudad, barrio, titulo, fechaInicio, fechaFin, horaInicio, horaFin })
+    axios.post('http://10.3.0.251:3000/api/reportes/obtenerMapaCalor', { ciudad, barrio, titulo, fechaInicio, fechaFin, horaInicio, horaFin })
       .then(response => {
 
 
@@ -674,7 +674,7 @@ const ReportsPage = () => {
       .catch(error => { console.error(error); });
   };
   const obtenerDatosCards = () => {
-    axios.get('http://192.188.58.82:3000/api/reportes/obtenerDatosCards')
+    axios.get('http://10.3.0.251:3000/api/reportes/obtenerDatosCards')
       .then(response => {
         setPublicacionesRegistradas(response.data.data.publicacionesRegistradas);
         setUsuariosRegistros(response.data.data.usuariosRegistros);
@@ -687,7 +687,7 @@ const ReportsPage = () => {
 
 
   const obtenerCoordenadas = (ciudad: any, barrio: any, titulo: any, fechaInicio: any, fechaFin: any, horaInicio: any, horaFin: any) => {
-    axios.post('http://192.188.58.82:3000/api/reportes/obtenerCoordenadas', { ciudad, barrio, titulo, fechaInicio, fechaFin, horaInicio, horaFin })
+    axios.post('http://10.3.0.251:3000/api/reportes/obtenerCoordenadas', { ciudad, barrio, titulo, fechaInicio, fechaFin, horaInicio, horaFin })
       .then(response => {
         setCoordenadas(response.data.data);
 
@@ -699,7 +699,7 @@ const ReportsPage = () => {
 
   const descargarExcel = () => {
     axios
-      .post('http://192.188.58.82:3000/api/reportes/descargarXLSX', {
+      .post('http://10.3.0.251:3000/api/reportes/descargarXLSX', {
         ciudad: selectedCiudad,
         barrio: selectedBarrio, titulo: selectedEmergencia, fechaInicio: selectedDateRange.startDate
         , fechaFin: selectedDateRange.endDate, horaInicio: selectedHoraInicio.$d, horaFin: selectedHoraFin.$d
@@ -732,7 +732,7 @@ const ReportsPage = () => {
 
     axios
       .post(
-        "http://192.188.58.82:3000/api/reportes/descargarPDF",
+        "http://10.3.0.251:3000/api/reportes/descargarPDF",
         {
           ciudad: selectedCiudad,
           barrio: selectedBarrio,
@@ -753,7 +753,7 @@ const ReportsPage = () => {
 
      
         axios
-          .get("http://192.188.58.82:3000/api/documents", {
+          .get("http://10.3.0.251:3000/api/documents", {
             responseType: "arraybuffer",
           })
           .then((res) => {
@@ -782,7 +782,7 @@ const ReportsPage = () => {
 
   const verPDF = () => {
     axios
-      .post('http://192.188.58.82:3000/api/reportes/descargarPDF', {
+      .post('http://10.3.0.251:3000/api/reportes/descargarPDF', {
         ciudad: selectedCiudad,
         barrio: selectedBarrio, titulo: selectedEmergencia, fechaInicio: selectedDateRange.startDate
         , fechaFin: selectedDateRange.endDate, horaInicio: selectedHoraInicio.$d, horaFin: selectedHoraFin.$d
@@ -806,7 +806,7 @@ const ReportsPage = () => {
 
   const descargarCSV = () => {
     axios
-      .post('http://192.188.58.82:3000/api/reportes/descargarCSV', {
+      .post('http://10.3.0.251:3000/api/reportes/descargarCSV', {
         ciudad: selectedCiudad,
         barrio: selectedBarrio, titulo: selectedEmergencia, fechaInicio: selectedDateRange.startDate
         , fechaFin: selectedDateRange.endDate, horaInicio: selectedHoraInicio.$d, horaFin: selectedHoraFin.$d
