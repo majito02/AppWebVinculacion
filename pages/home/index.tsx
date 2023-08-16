@@ -169,7 +169,7 @@ const HomePage = () => {
                           </div>
                           <p className="text-sm font-bold">GOOGLE PLAY</p>
                         </Link>
-                        <Link
+                        {/* <Link
                           href={"#"}
                           className="flex flex-row justify-center items-center space-x-2  border-2 border-solid border-color-gray rounded-lg p-2 w-44  hover:border-color-secondary hover:scale-110  hover:bg-color-secondary hover:text-white duration-200 ease-in"
                         >
@@ -182,7 +182,7 @@ const HomePage = () => {
                             />
                           </div>
                           <p className="text-sm font-bold">APP STORE</p>
-                        </Link>
+                        </Link> */}
                       </div>
                     </div>
                   </Animate.FadeUp>

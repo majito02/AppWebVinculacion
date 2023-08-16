@@ -753,13 +753,20 @@ const ReportsPage = () => {
 
      
         axios
-          .get("http://10.3.0.251:3000/api/documents", {
-            responseType: "arraybuffer",
-          })
-          .then((res) => {
-            const pdfBlob = new Blob([res.data], { type: "application/pdf" });
-            saveAs(pdfBlob, "datos.pdf");
-          });
+        .get("http://10.3.0.251:3000/api/documents", {
+          responseType: "arraybuffer",
+        })
+        .then((res) => {
+          // Crear una URL a partir del blob de la respuesta
+          const pdfBlob = new Blob([res.data], { type: "application/pdf" });
+          const url = window.URL.createObjectURL(pdfBlob);
+      
+          // Abrir una nueva ventana del navegador con la URL del PDF
+          window.open(url, '_blank');
+        })
+        .catch((error) => {
+          console.error("Error al abrir el archivo en una nueva pestaña:", error);
+        });
 
         // Crear un enlace temporal para descargar el archivo
         // const link = document.createElement("a");
