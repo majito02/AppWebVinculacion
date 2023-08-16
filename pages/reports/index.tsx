@@ -259,7 +259,7 @@ const ReportsPage = () => {
   };
 
   const obtenerAnios = (ciudad: any, barrio: any, titulo: any) => {
-    axios.post('http://10.3.0.251:3000/api/reportes/obtenerAnios', { ciudad, barrio, titulo })
+    axios.post('http://10.3.0.251:3000/api/reportes/obtenerAnios', { ciudad, barrio, titulo })  //Api obtener años
       .then(response => {
         setAnios(response.data.data);
       })
