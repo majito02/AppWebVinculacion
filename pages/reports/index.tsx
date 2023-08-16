@@ -213,7 +213,7 @@ const ReportsPage = () => {
 
   /* ciudad */
   const obtenerciudades = () => {
-    axios.get('http://192.188.58.82:3000/api/reportes/obtenerCiudades') 
+    axios.get('http://192.188.58.82:3000/api/reportes/obtenerCiudades') //api obtener ciudades
       .then(response => { setCiudades(response.data.data); if (primeraVez) { setSelectedCiudad(response.data.data[0]) } })
       .catch(error => { console.error(error); });
   }
