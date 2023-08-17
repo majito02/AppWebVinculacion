@@ -66,7 +66,7 @@ const EquipoPage: FC<PropsWithChildren<{}>> = ({ }) => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                Ver Perfil
+                                Ver Perfil de github
                               </a>
 
                             </div>
@@ -106,7 +106,7 @@ const EquipoPage: FC<PropsWithChildren<{}>> = ({ }) => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                Ver Perfil
+                                Ver Perfil de github
                               </a>
                             </div>
                           </div>
