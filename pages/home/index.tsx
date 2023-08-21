@@ -381,11 +381,11 @@ const HomePage = () => {
             </h1>
             <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12 lg:gap-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
               <div className="text-center">
-                <Animate.MoveIn>
+                <Animate.MoveRight>
                   <div className="lg:flex flex-col justify-center items-center hidden">
                     <Image width={230} height={230} src="/SeguridadESPE/images/mapa.jpg" className="rounded-lg shadow-lg" alt="mapa" />
                   </div>
-                </Animate.MoveIn>
+                </Animate.MoveRight>
                 <Image width={230} height={230} src="/SeguridadESPE/images/mapa.jpg" className="rounded-lg shadow-lg lg:hidden" alt="mapa" />
                 <h3 className="mt-4 text-2xl">Mapa</h3>
               </div>
