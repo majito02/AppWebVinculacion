@@ -2,6 +2,7 @@ import React, { FC, PropsWithChildren } from "react";
 import { Layout } from "../../components/layouts/Layout";
 import { EnvelopeIcon, LightBulbIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import { text } from "stream/consumers";
 
 const EquipoPage: FC<PropsWithChildren<{}>> = ({ }) => {
   return (
@@ -37,10 +38,10 @@ const EquipoPage: FC<PropsWithChildren<{}>> = ({ }) => {
                       <LightBulbIcon className="text-color-secondary h-14 w-14" />
                       <p className="font-bold text-color-primario second-title">Vinicio Leonardo Borja</p>
                     </div>
-                    <div className="w-full lg:w-1/2 h-full">
-                      <div className="flip-card h-72 lg:h-full bg-color-lila">
-                        <div className="flip-card-inner">
-                          <div className="flip-card-front">
+                    <div className="w-full lg:w-1/2 h-full ">
+                      <div className=" flip-card h-72 lg:h-full bg-color-lila">
+                        <div className="flip-card-inner" style={{ width: "280px"}}>
+                          <div className="flip-card-front" style={{ width: "280px" }}>
                             <Image
                               width={500}
                               height={500}
@@ -79,12 +80,12 @@ const EquipoPage: FC<PropsWithChildren<{}>> = ({ }) => {
                   <div className="w-full flex flex-col-reverse lg:flex-row h-full lg:h-1/2 overflow-hidden">
                     <div className="w-full lg:w-1/2 h-full">
                       <div className="flip-card h-72 lg:h-full bg-color-lila">
-                        <div className="flip-card-inner">
-                          <div className="flip-card-front">
+                        <div className="flip-card-inner" style={{ width: "280px"}}>
+                          <div className="flip-card-front"  style={{ width: "280px"}}>
                             <Image
-                              width={500}
+                              width={280}
                               height={500}
-                              src="/SeguridadESPE/images/majo.jpg"
+                              src="/SeguridadESPE/images/majo.jpeg"
                               className="object-fill"
                               alt="Persona 1"
                             />

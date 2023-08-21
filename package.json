@@ -33,6 +33,7 @@
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
     "file-saver": "^2.0.5",
+    "framer-motion": "^10.16.1",
     "heroicons": "^2.0.18",
     "highcharts": "^11.1.0",
     "highcharts-react-official": "^3.2.0",

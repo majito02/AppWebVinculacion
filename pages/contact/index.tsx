@@ -234,11 +234,11 @@ const ContactPage = () => {
               <Image
                 width={1920}
                 height={1080}
-                src="/SeguridadESPE/images/workteam.jpg"
+                src="/SeguridadESPE/images/espec2.jpeg"
                 className="object-fill"
                 alt="Persona 1" />
             </div>
-            <div className="w-full h-full lg:w-1/2 lg:py-20 lg:absolute lg:top-0 lg:right-10">
+            <div className="w-full h-full lg:w-1/3 lg:py-20 lg:absolute lg:top-0 lg:right-10">
               <div className="w-full h-full flex justify-center items-center">
                 <div className="gray-faded shadow-lg rounded-lg p-4 lg:p-10">
                   <div className="fade-in">
