@@ -107,8 +107,10 @@ const FilosofiaPage = () => {
         <section className="bg-color-white">
 
           <div className="pt-28">
-            <div className="flex flex-col items-center justify-center gap-4 px-6 fade-in">
-              <Image width={260} height={250} className="move-in" src="/SeguridadESPE/images/espe.png" alt="espe" />
+            <div className="flex flex-col items-center justify-center gap-4 px-6 fade-in">\
+              <div className="overflow-hidden">
+                <Image width={260} height={250} className="move-in" src="/SeguridadESPE/images/espe.png" alt="espe" />
+              </div>
 
               <h1 className="title">Universidad de las Fuerzas Armadas ESPE</h1>
               <p className="text-slate-500">Filosofía Institucional</p>
@@ -139,7 +141,7 @@ const FilosofiaPage = () => {
                 </div>
                 <div className="lg:absolute lg:top-20 lg:left-2/4 lg:ml-10">
                   <Carousel autoPlay={true} interval={3000} infiniteLoop={true}>
-                    
+
                     <div>
                       <Image src="/SeguridadESPE/images/sede.jpg" width={700} height={100} alt="image" />
                     </div>

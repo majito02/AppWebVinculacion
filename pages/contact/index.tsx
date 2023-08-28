@@ -229,16 +229,16 @@ const ContactPage = () => {
             </div>
           </div>}
 
-          <div className="w-full h-full lg:h-screen flex flex-col lg:flex-row justify-center items-center relative overflow-hidden fade-in">
-            <div className="w-full">
+          <div className="w-full h-full px-0 md:px-20 lg:px-10 flex flex-col lg:flex-row justify-end items-center relative overflow-hidden fade-in">
+            <div className="w-full h-full max-h-screen absolute flex justify-center left-0 top-0">
               <Image
                 width={1920}
                 height={1080}
                 src="/SeguridadESPE/images/espec2.jpeg"
-                className="object-fill"
+                className="object-cover object-center"
                 alt="Persona 1" />
             </div>
-            <div className="w-full h-full lg:w-1/3 lg:py-20 lg:absolute lg:top-0 lg:right-10">
+            <div className="w-full h-full lg:w-1/3 py-10 lg:py-20 z-10 lg:mr-10">
               <div className="w-full h-full flex justify-center items-center">
                 <div className="gray-faded shadow-lg rounded-lg p-4 lg:p-10">
                   <div className="fade-in">

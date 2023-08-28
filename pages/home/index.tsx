@@ -122,7 +122,7 @@ const HomePage = () => {
   return (
     <>
       <div className="flex flex-col">
-        <section className="relative w-full lg:h-screen bg-color-lila flex justify-center align-middle overflow-x-hidden pt-28 pb-10 lg:py-0">
+        <section className="relative w-full h-full bg-color-lila flex justify-center overflow-hidden py-20 lg:pt-36 lg:pb-32">
           <Animate.FadeIn>
             <div className="bubbles-box fade-in">
               <div className="inner">
@@ -226,23 +226,23 @@ const HomePage = () => {
                   <div className="text-start px-10 lg:px-0 h-full w-full move-in">
                     <h1 className="title mb-10 ">¿Cómo funciona?</h1>
                     <ul>
-                      <li className="mb-8">
+                      <li className="mb-8 flex items-center">
                         <span className="bg-gray-100 px-5 py-3 rounded-full mr-3 text-blue-800 font-bold text-2xl">1</span>
                         <span className="text-2xl">Descarga la aplicación Seguridad ESPE</span>
                       </li>
-                      <li className="mb-8">
+                      <li className="mb-8 flex items-center">
                         <span className="bg-gray-100 px-5 py-3 rounded-full mr-3 text-blue-800 font-bold text-2xl">2</span>
                         <span className="text-2xl">Realiza un reporte y publícalo</span>
                       </li>
-                      <li className="mb-8">
+                      <li className="mb-8 flex items-center">
                         <span className="bg-gray-100 px-5 py-3 rounded-full mr-3 text-blue-800 font-bold text-2xl">3</span>
                         <span className="text-2xl">Revisa el reporte publicado en noticias</span>
                       </li>
-                      <li className="mb-8">
+                      <li className="mb-8 flex items-center">
                         <span className="bg-gray-100 px-5 py-3 rounded-full mr-3 text-blue-800 font-bold text-2xl">4</span>
                         <span className="text-2xl">Crea grupos personalizados</span>
                       </li>
-                      <li>
+                      <li className="flex items-center">
                         <span className="bg-gray-100 px-5 py-3 rounded-full mr-3 text-blue-800 font-bold text-2xl">5</span>
                         <span className="text-2xl">Agrega tus lugares más frecuentes</span>
                       </li>
@@ -332,15 +332,15 @@ const HomePage = () => {
                 <h1 className="title mb-6 md:mb-6 lg:mb-8 ">
                   Impactos esperados de la aplicación
                 </h1>
-                <div className="w-full flex flex-col lg:flex-row gap-x-0 lg:gap-x-10">
+                <div className="w-full flex flex-col gap-x-0 lg:flex-row lg:gap-x-10 gap-y-5">
                   <div className="flex flex-col w-full lg:w-1/4">
                     <div className="mb-4 flex justify-center">
                       <img className="mb-1 " width="60" height="60" src="/SeguridadESPE/images/comunidad.png" />
-
                     </div>
                     <div className="px-2">
                       <span>
-                        Mantener a la comunidad informada a diario de los diferentes tipos de emergencias que ocurren regularmente.​                      </span>
+                        Mantener a la comunidad informada a diario de los diferentes tipos de emergencias que ocurren regularmente.
+                      </span>
                     </div>
                   </div>
                   <div className="flex flex-col w-full lg:w-1/4">
@@ -354,18 +354,22 @@ const HomePage = () => {
                   </div>
                   <div className="flex flex-col w-full lg:w-1/4">
                     <div className="mb-4 flex justify-center">
-                      <img className="mb-1 " width="60" height="60" src="/SeguridadESPE/images/smsimpacto.png" />                    </div>
+                      <img className="mb-1 " width="60" height="60" src="/SeguridadESPE/images/smsimpacto.png" />
+                    </div>
                     <div className="px-2">
                       <span>
-                        Facilitar la comunicación entre los miembros de la comunidad a través de un sistema de mensajería.                      </span>
+                        Facilitar la comunicación entre los miembros de la comunidad a través de un sistema de mensajería.
+                      </span>
                     </div>
                   </div>
                   <div className="flex flex-col w-full lg:w-1/4">
                     <div className="mb-4 flex justify-center">
-                      <img className="mb-1 " width="60" height="60" src="/SeguridadESPE/images/alarma.png" />                    </div>
+                      <img className="mb-1 " width="60" height="60" src="/SeguridadESPE/images/alarma.png" />
+                    </div>
                     <div className="px-2">
                       <span>
-                        Proporcionar notificaciones instantáneas al activar el SOS, asegurando una respuesta rápida y eficaz.                      </span>
+                        Proporcionar notificaciones instantáneas al activar el SOS, asegurando una respuesta rápida y eficaz.
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -374,45 +378,53 @@ const HomePage = () => {
           </div>
         </section>
 
-        <section className="bg-color-lila lg:h-screen w-full">
+        <section className="bg-color-lila w-full">
           <div className="container lg:py-16 md:py-8 py-4 px-10 lg:px-32 relative">
             <h1 className="title mb-10 text-center">
               Funcionalidades
             </h1>
             <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12 lg:gap-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
-              <div className="text-center">
-                <Animate.MoveRight>
-                  <div className="lg:flex flex-col justify-center items-center hidden">
-                    <Image width={230} height={230} src="/SeguridadESPE/images/mapa.jpg" className="rounded-lg shadow-lg" alt="mapa" />
-                  </div>
-                </Animate.MoveRight>
+              <div className="text-center flex flex-col items-center">
+                <div className="overflow-hidden">
+                  <Animate.MoveIn>
+                    <div className="lg:flex flex-col justify-center items-center hidden">
+                      <Image width={230} height={230} src="/SeguridadESPE/images/mapa.jpg" className="rounded-lg shadow-lg" alt="mapa" />
+                    </div>
+                  </Animate.MoveIn>
+                </div>
                 <Image width={230} height={230} src="/SeguridadESPE/images/mapa.jpg" className="rounded-lg shadow-lg lg:hidden" alt="mapa" />
                 <h3 className="mt-4 text-2xl">Mapa</h3>
               </div>
-              <div className="text-center">
-                <Animate.MoveIn>
-                  <div className="lg:flex flex-col justify-center items-center hidden">
-                    <Image width={230} height={230} src="/SeguridadESPE/images/noticias.png" className="rounded-lg shadow-lg" alt="noticias" />
-                  </div>
-                </Animate.MoveIn>
+              <div className="text-center flex flex-col items-center">
+                <div className="overflow-hidden">
+                  <Animate.MoveIn>
+                    <div className="lg:flex flex-col justify-center items-center hidden">
+                      <Image width={230} height={230} src="/SeguridadESPE/images/noticias.png" className="rounded-lg shadow-lg" alt="noticias" />
+                    </div>
+                  </Animate.MoveIn>
+                </div>
                 <Image width={230} height={230} src="/SeguridadESPE/images/noticias.png" className="rounded-lg shadow-lg lg:hidden" alt="noticias" />
                 <h3 className="mt-4 text-2xl">Noticias</h3>
               </div>
-              <div className="text-center flex flex-col justify-center">
-                <Animate.MoveIn>
-                  <div className="lg:flex flex-col justify-center items-center hidden">
-                    <Image width={230} height={230} src="/SeguridadESPE/images/grupos.jpg" className="rounded-lg shadow-lg" alt="grupos" />
-                  </div>
-                </Animate.MoveIn>
+              <div className="text-center flex flex-col items-center">
+                <div className="overflow-hidden">
+                  <Animate.MoveIn>
+                    <div className="lg:flex flex-col justify-center items-center hidden">
+                      <Image width={230} height={230} src="/SeguridadESPE/images/grupos.jpg" className="rounded-lg shadow-lg" alt="grupos" />
+                    </div>
+                  </Animate.MoveIn>
+                </div>
                 <Image width={230} height={230} src="/SeguridadESPE/images/grupos.jpg" className="rounded-lg shadow-lg lg:hidden" alt="grupos" />
                 <h3 className="mt-4 text-2xl">Grupos</h3>
               </div>
-              <div className="text-center flex flex-col justify-center">
-                <Animate.MoveIn>
-                  <div className="lg:flex flex-col justify-center items-center hidden">
-                    <Image width={230} height={230} src="/SeguridadESPE/images/lugares.jpg" className="rounded-lg shadow-lg" alt="lugares" />
-                  </div>
-                </Animate.MoveIn>
+              <div className="text-center flex flex-col items-center">
+                <div className="overflow-hidden">
+                  <Animate.MoveIn>
+                    <div className="lg:flex flex-col justify-center items-center hidden">
+                      <Image width={230} height={230} src="/SeguridadESPE/images/lugares.jpg" className="rounded-lg shadow-lg" alt="lugares" />
+                    </div>
+                  </Animate.MoveIn>
+                </div>
                 <Image width={230} height={230} src="/SeguridadESPE/images/lugares.jpg" className="rounded-lg shadow-lg lg:hidden" alt="lugares" />
                 <h3 className="mt-4 text-2xl">Lugares</h3>
               </div>
@@ -420,8 +432,8 @@ const HomePage = () => {
           </div>
         </section>
 
-        <section className="bg-white h-full lg:h-screen w-full flex items-center">
-          <div className="container relative py-10 lg:py-2 px-10 lg:px-32">
+        <section className="bg-white h-full w-full flex items-center">
+          <div className="container relative py-10 px-10 lg:px-32">
             <Animate.FadeIn>
               <h1 className="title mb-10 text-center">
                 ¿De dónde nace?
@@ -438,7 +450,6 @@ const HomePage = () => {
                 <Image className="img_no_user_select absolute opacity-10" width={500} height={500} src="/SeguridadESPE/images/espe.png" alt="profesor" />
                 <br />
                 <Animate.FadeIn>
-
                   <div>
                     <p className="mb-6">
                       Seguridad ESPE, nace a partir del proyecto de vinculación con la sociedad denominado &ldquo;Implementación de aplicaciones web y móvil para gestionar emergencias comunitarias en la provincia de Santo Domingo de los Tsáchilas&ldquo;; con la finalidad de fortalecer la seguridad de la comunidad con la comunicación, coordinación y respuesta ante situaciones de emergencia. La aplicación aprovechará el alto uso de dispositivos móviles e Internet para hacer frente a los desafíos de seguridad, brindando una solución innovadora en el campo de la protección ciudadana.
@@ -448,8 +459,6 @@ const HomePage = () => {
                     </p>
                     <p>
                       La aplicación web por otra parte, tiene como objetivo principal proporcionar reportes estadísticos detallados sobre diferentes tipos de emergencias comunitarias. Brinda las opciones de filtrar ubicación, tipo, hora de inicio, hora de fin, fecha de inicio y fin de la emergencia, se accede a datos específicos y relevantes para un análisis más preciso. Además, permite la generación y descarga de informes en formato PDF, a su vez es posible descargar la imagen de la gráfica en formatos PNG y SVG. En caso de necesitar más información, la base de datos se puede descargar en formato CSV (Comma Separated Values) o xlsx (Excel), simplificando así el análisis y el uso de la información para la toma de decisiones en la comunidad.
-
-
                     </p>
                   </div>
                 </Animate.FadeIn>

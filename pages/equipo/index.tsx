@@ -10,42 +10,44 @@ const EquipoPage: FC<PropsWithChildren<{}>> = ({ }) => {
     <>
       <Layout title="Nuestro Equipo">
         <section>
-          <div className="w-full h-full lg:h-screen bg-gray-100 pt-12 lg:pt-32 lg:pb-12 lg:px-20 mb-0">
+          <div className="w-full h-full bg-gray-100 pt-12 lg:pt-32 lg:pb-12 lg:px-20 mb-0">
             <div className="bg-color-lila w-full h-full">
               <div className="w-full h-full flex flex-col lg:flex-row">
-                <div className="w-full lg:w-1/2 h-full p-10 lg:p-20 flex flex-col justify-center">
-                  <h1 className="title mb-10 text-color-primario">Miembros de nuestro equipo</h1>
-                  <p className="text-sm text-justify">
-                    La Universidad de las Fuerzas Armadas ESPE es una institución
-                    académica reconocida por su excelencia en la formación de
-                    profesionales altamente capacitados en diversas áreas del
-                    conocimiento. Su compromiso con la calidad educativa, su
-                    amplia trayectoria y su vinculación con las Fuerzas Armadas la
-                    convierten en una institución destacada en el ámbito
-                    educativo. Como estudiantes de la carrera de Ingeniera de
-                    Tecnologías de la Información, nos enorgullece apoyar a
-                    iniciativas como esta que buscan mejorar el bienestar de las
-                    comunidades. Hemos trabajado arduamente para desarrollar una
-                    aplicación efectiva que contribuya a la seguridad y protección
-                    de los habitantes. ¡Estamos comprometidos en crear un entorno
-                    seguro y brindar soluciones innovadoras para enfrentar los
-                    desafíos de seguridad en la provincia!
-                  </p>
+                <div className="w-full lg:w-1/2 p-10 lg:p-20 flex items-center">
+                  <div>
+                    <h1 className="title mb-10 text-color-primario">Miembros de nuestro equipo</h1>
+                    <p className="text-sm text-justify">
+                      La Universidad de las Fuerzas Armadas ESPE es una institución
+                      académica reconocida por su excelencia en la formación de
+                      profesionales altamente capacitados en diversas áreas del
+                      conocimiento. Su compromiso con la calidad educativa, su
+                      amplia trayectoria y su vinculación con las Fuerzas Armadas la
+                      convierten en una institución destacada en el ámbito
+                      educativo. Como estudiantes de la carrera de Ingeniera de
+                      Tecnologías de la Información, nos enorgullece apoyar a
+                      iniciativas como esta que buscan mejorar el bienestar de las
+                      comunidades. Hemos trabajado arduamente para desarrollar una
+                      aplicación efectiva que contribuya a la seguridad y protección
+                      de los habitantes. ¡Estamos comprometidos en crear un entorno
+                      seguro y brindar soluciones innovadoras para enfrentar los
+                      desafíos de seguridad en la provincia!
+                    </p>
+                  </div>
                 </div>
-                <div className="w-full lg:w-1/2 h-full flex flex-col bg-white">
+                <div className="w-full lg:w-1/2 flex flex-col bg-white">
                   <div className="w-full flex flex-col lg:flex-row h-full lg:h-1/2 overflow-hidden">
                     <div className="w-full lg:w-1/2 h-full flex flex-col justify-center items-center text-center gap-y-4 px-6 py-4">
                       <LightBulbIcon className="text-color-secondary h-14 w-14" />
                       <p className="font-bold text-color-primario second-title">Vinicio Leonardo Borja</p>
                     </div>
                     <div className="w-full lg:w-1/2 h-full ">
-                      <div className=" flip-card h-72 lg:h-full bg-color-lila">
-                        <div className="flip-card-inner" style={{ width: "280px"}}>
-                          <div className="flip-card-front" style={{ width: "280px" }}>
+                      <div className=" flip-card bg-color-lila">
+                        <div className="flip-card-inner">
+                          <div className="flip-card-front">
                             <Image
                               width={500}
                               height={500}
-                              src="/SeguridadESPE/images/vinicio.png"
+                              src="/SeguridadESPE/images/vinicio.jpg"
                               className="object-fill"
                               alt="Persona 1"
                             />
@@ -74,24 +76,23 @@ const EquipoPage: FC<PropsWithChildren<{}>> = ({ }) => {
                           </div>
                         </div>
                       </div>
-                     
                     </div>
                   </div>
                   <div className="w-full flex flex-col-reverse lg:flex-row h-full lg:h-1/2 overflow-hidden">
                     <div className="w-full lg:w-1/2 h-full">
-                      <div className="flip-card h-72 lg:h-full bg-color-lila">
-                        <div className="flip-card-inner" style={{ width: "280px"}}>
-                          <div className="flip-card-front"  style={{ width: "280px"}}>
+                      <div className="flip-card bg-color-lila">
+                        <div className="flip-card-inner">
+                          <div className="flip-card-front flex justify-end">
                             <Image
-                              width={280}
-                              height={500}
-                              src="/SeguridadESPE/images/majo.jpeg"
-                              className="object-fill"
+                              width={500}
+                              height={100}
+                              src="/SeguridadESPE/images/majo.jpg"
                               alt="Persona 1"
+                              className="object-cover object-top"
                             />
                           </div>
                           <div className="flip-card-back bg-color-secondary">
-                            <div className="flex flex-col justify-center items-center text-center w-full h-full py-4">
+                            <div className="flex flex-col justify-center items-center text-center w-full h-full">
                               <p className="second-title text-white text-sm">
                                 Desarrollador de Software
                               </p>
@@ -113,13 +114,6 @@ const EquipoPage: FC<PropsWithChildren<{}>> = ({ }) => {
                           </div>
                         </div>
                       </div>
-                      {/* <Image
-                        width={500}
-                        height={500}
-                        src="/SeguridadESPE/images/majo.jpg"
-                        className="object-fill lg:hidden"
-                        alt="Persona 1"
-                      /> */}
                     </div>
                     <div className="w-full lg:w-1/2 h-full flex flex-col justify-center items-center text-center gap-y-4 px-6 py-4">
                       <LightBulbIcon className="text-color-secondary h-14 w-14 " />
