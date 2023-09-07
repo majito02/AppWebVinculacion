@@ -213,7 +213,7 @@ const ReportsPage = () => {
 
   /* ciudad */
   const obtenerciudades = () => {
-    axios.get('http://192.188.58.82:3000/api/reportes/obtenerCiudades') //api obtener ciudades
+    axios.get('http://192.188.58.82:3000/api/reportes/obtenerCiudades') //api obtener ciudades 
       .then(response => { setCiudades(response.data.data); if (primeraVez) { setSelectedCiudad(response.data.data[0]) } })
       .catch(error => { console.error(error); });
   }
@@ -236,7 +236,7 @@ const ReportsPage = () => {
   };
 
   const obtenerBarrios = (ciudad: any) => {
-    axios.post('http://192.188.58.82:3000/api/reportes/obtenerBarrios', { ciudad }) //api obtener barrios
+    axios.post('http://192.188.58.82:3000/api/reportes/obtenerBarrios', { ciudad }) //api obtener barrios de la provincia
       .then(response => { setBarrios(response.data.data); })
       .catch(error => { console.error(error); });
   }
