@@ -213,7 +213,7 @@ const ReportsPage = () => {
 
   /* ciudad */
   const obtenerciudades = () => {
-    axios.get('http://10.3.0.251:3000/api/reportes/obtenerCiudades') //api obtener ciudades
+    axios.get('http://192.188.58.82:3000/api/reportes/obtenerCiudades') //api obtener ciudades
       .then(response => { setCiudades(response.data.data); if (primeraVez) { setSelectedCiudad(response.data.data[0]) } })
       .catch(error => { console.error(error); });
   }
@@ -236,7 +236,7 @@ const ReportsPage = () => {
   };
 
   const obtenerBarrios = (ciudad: any) => {
-    axios.post('http://10.3.0.251:3000/api/reportes/obtenerBarrios', { ciudad }) //api obtener barrios
+    axios.post('http://192.188.58.82:3000/api/reportes/obtenerBarrios', { ciudad }) //api obtener barrios
       .then(response => { setBarrios(response.data.data); })
       .catch(error => { console.error(error); });
   }
@@ -247,7 +247,7 @@ const ReportsPage = () => {
     await generearGraficos()
   };
   const obtenerEmergencias = (ciudad: any, barrio: any) => {
-    axios.post('http://10.3.0.251:3000/api/reportes/obtenerEmergencias', { ciudad, barrio })
+    axios.post('http://192.188.58.82:3000/api/reportes/obtenerEmergencias', { ciudad, barrio })
       .then(response => { setEmergencias(response.data.data); })
       .catch(error => { console.error(error); });
   };
@@ -259,7 +259,7 @@ const ReportsPage = () => {
   };
 
   const obtenerAnios = (ciudad: any, barrio: any, titulo: any) => {
-    axios.post('http://10.3.0.251:3000/api/reportes/obtenerAnios', { ciudad, barrio, titulo })  //Api obtener años
+    axios.post('http://192.188.58.82:3000/api/reportes/obtenerAnios', { ciudad, barrio, titulo })  //Api obtener años
       .then(response => {
         setAnios(response.data.data);
       })
@@ -294,7 +294,7 @@ const ReportsPage = () => {
   }
 
   const obtenerReporteBarras = (ciudad: any, barrio: any, titulo: any, fechaInicio: any, fechaFin: any, horaInicio: any, horaFin: any) => {
-    axios.post('http://10.3.0.251:3000/api/reportes/obtenerReporteBarras', { ciudad, barrio, titulo, fechaInicio, fechaFin, horaInicio, horaFin })
+    axios.post('http://192.188.58.82:3000/api/reportes/obtenerReporteBarras', { ciudad, barrio, titulo, fechaInicio, fechaFin, horaInicio, horaFin })
       .then(response => {
         setDataBarrasNumber(response.data.data);
         console.log(response.data.data);
@@ -342,13 +342,13 @@ const ReportsPage = () => {
 
   const obtenerReportPastel = (ciudad: any, barrio: any, titulo: any, fechaInicio: any, fechaFin: any, horaInicio: any, horaFin: any) => {
 
-    axios.post('http://10.3.0.251:3000/api/reportes/obtenerReportePastel', { ciudad, barrio, titulo, fechaInicio, fechaFin, horaInicio, horaFin })
+    axios.post('http://192.188.58.82:3000/api/reportes/obtenerReportePastel', { ciudad, barrio, titulo, fechaInicio, fechaFin, horaInicio, horaFin })
       .then(response => {/* setDataBarrasNumber(response.data.data); */
         const values: any = Object.keys(response.data.data);
         const conteos: any = Object.values(response.data.data);
         console.log("obtenerReportePastel");
-          
-          console.log(conteos);
+
+        console.log(conteos);
         const colores = [
           '#FF5733', '#3366CC', '#66CC66', '#FFC300', '#FF9933',
           '#9966CC', '#FF3399', '#00CC99', '#FF6600', '#0099CC',
@@ -409,7 +409,7 @@ const ReportsPage = () => {
             floating: true
           },
           subtitle: {
-            text: 'Cantidad de Eemergencias',
+            text: 'Cantidad de Emergencias',
             align: 'center',
           },
           tooltip: {
@@ -614,15 +614,15 @@ const ReportsPage = () => {
 
 
   const obtenerMapaCalor = (ciudad: any, barrio: any, titulo: any, fechaInicio: any, fechaFin: any, horaInicio: any, horaFin: any) => {
-    axios.post('http://10.3.0.251:3000/api/reportes/obtenerMapaCalor', { ciudad, barrio, titulo, fechaInicio, fechaFin, horaInicio, horaFin })
+    axios.post('http://192.188.58.82:3000/api/reportes/obtenerMapaCalor', { ciudad, barrio, titulo, fechaInicio, fechaFin, horaInicio, horaFin })
       .then(response => {
 
 
         const tooltip: any = response.data.data.tooltip;
         const tooltiptime: any = response.data.data.tooltiptime;
 
-        const diasSemana = [ 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado','Domingo'];
-      
+        const diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+
         let heatmapdataTemp = response.data.data.heatmapData
 
         // Remover el primer elemento y guardarlo en una variable temporal
@@ -631,7 +631,7 @@ const ReportsPage = () => {
         // Agregar el primer día al final del array
         heatmapdataTemp.push(primerDia);
         // Remover el primer elemento y guardarlo en una variable temporal
-         let tooltiptimeTemp = tooltiptime.shift();
+        let tooltiptimeTemp = tooltiptime.shift();
 
         // Agregar el primer día al final del array
         tooltiptime.push(tooltiptimeTemp); /**/
@@ -639,7 +639,7 @@ const ReportsPage = () => {
         let tooltipTemp = tooltip.shift();
 
         // Agregar el primer día al final del array
-   
+
 
 
         sethHeatmapData(heatmapdataTemp)
@@ -695,7 +695,7 @@ const ReportsPage = () => {
       .catch(error => { console.error(error); });
   };
   const obtenerDatosCards = () => {
-    axios.get('http://10.3.0.251:3000/api/reportes/obtenerDatosCards')
+    axios.get('http://192.188.58.82:3000/api/reportes/obtenerDatosCards')
       .then(response => {
         setPublicacionesRegistradas(response.data.data.publicacionesRegistradas);
         setUsuariosRegistros(response.data.data.usuariosRegistros);
@@ -708,7 +708,7 @@ const ReportsPage = () => {
 
 
   const obtenerCoordenadas = (ciudad: any, barrio: any, titulo: any, fechaInicio: any, fechaFin: any, horaInicio: any, horaFin: any) => {
-    axios.post('http://10.3.0.251:3000/api/reportes/obtenerCoordenadas', { ciudad, barrio, titulo, fechaInicio, fechaFin, horaInicio, horaFin })
+    axios.post('http://192.188.58.82:3000/api/reportes/obtenerCoordenadas', { ciudad, barrio, titulo, fechaInicio, fechaFin, horaInicio, horaFin })
       .then(response => {
         setCoordenadas(response.data.data);
 
@@ -720,7 +720,7 @@ const ReportsPage = () => {
 
   const descargarExcel = () => {
     axios
-      .post('http://10.3.0.251:3000/api/reportes/descargarXLSX', {
+      .post('http://192.188.58.82:3000/api/reportes/descargarXLSX', {
         ciudad: selectedCiudad,
         barrio: selectedBarrio, titulo: selectedEmergencia, fechaInicio: selectedDateRange.startDate
         , fechaFin: selectedDateRange.endDate, horaInicio: selectedHoraInicio.$d, horaFin: selectedHoraFin.$d
@@ -748,12 +748,14 @@ const ReportsPage = () => {
       });
   };
 
+
+
   const descargarPDF = () => {
     console.log("selectedCiudad", selectedCiudad);
 
     axios
       .post(
-        "http://10.3.0.251:3000/api/reportes/descargarPDF",
+        "http://192.188.58.82:3000/api/reportes/descargarPDF",
         {
           ciudad: selectedCiudad,
           barrio: selectedBarrio,
@@ -772,36 +774,28 @@ const ReportsPage = () => {
         const url = window.URL.createObjectURL(new Blob([response.data]));
         console.log(response.data);
 
-     
         axios
-        .get("http://10.3.0.251:3000/api/documents", {
-          responseType: "arraybuffer",
-        })
-        .then((res) => {
-          // Crear una URL a partir del blob de la respuesta
-          const pdfBlob = new Blob([res.data], { type: "application/pdf" });
-          const url = window.URL.createObjectURL(pdfBlob);
-      
-          // Abrir una nueva ventana del navegador con la URL del PDF
-          window.open(url, '_blank');
-        })
-        .catch((error) => {
-          console.error("Error al abrir el archivo en una nueva pestaña:", error);
-        });
+          .get("http://192.188.58.82:3000/api/documents", {
+            responseType: "arraybuffer",
+          })
+          .then((res) => {
+            const pdfBlob = new Blob([res.data], { type: "application/pdf" });
+            const url = window.URL.createObjectURL(pdfBlob);
 
-        // Crear un enlace temporal para descargar el archivo
-        // const link = document.createElement("a");
-        // link.href = url;
-        // link.setAttribute("download", "datos.pdf"); // Nombre del archivo de descarga
-        // document.body.appendChild(link);
+            // Abrir una nueva ventana del navegador con la URL del PDF
+            // Descargar el archivo
+            const a = document.createElement("a");
+            a.download = "archivo.pdf";
+            a.href = url;
+            a.click();
+          })
 
-        // // Hacer clic en el enlace para iniciar la descarga
-        // console.log("response.data");
-
-        // link.click();
-
-        // // Liberar la URL creada
-        // window.URL.revokeObjectURL(url);
+          .catch((error) => {
+            console.error(
+              "Error al abrir el archivo en una nueva pestaña:",
+              error
+            );
+          });
       })
       .catch((error) => {
         console.error("Error al descargar el archivo:", error);
@@ -810,7 +804,7 @@ const ReportsPage = () => {
 
   const verPDF = () => {
     axios
-      .post('http://10.3.0.251:3000/api/reportes/descargarPDF', {
+      .post('http://192.188.58.82:3000/api/reportes/descargarPDF', {
         ciudad: selectedCiudad,
         barrio: selectedBarrio, titulo: selectedEmergencia, fechaInicio: selectedDateRange.startDate
         , fechaFin: selectedDateRange.endDate, horaInicio: selectedHoraInicio.$d, horaFin: selectedHoraFin.$d
@@ -834,7 +828,7 @@ const ReportsPage = () => {
 
   const descargarCSV = () => {
     axios
-      .post('http://10.3.0.251:3000/api/reportes/descargarCSV', {
+      .post('http://192.188.58.82:3000/api/reportes/descargarCSV', {
         ciudad: selectedCiudad,
         barrio: selectedBarrio, titulo: selectedEmergencia, fechaInicio: selectedDateRange.startDate
         , fechaFin: selectedDateRange.endDate, horaInicio: selectedHoraInicio.$d, horaFin: selectedHoraFin.$d
@@ -902,9 +896,9 @@ const ReportsPage = () => {
 
       <Layout title="Reportes">
 
-        <div className="w-full h-full bg-gray-100 pt-12 lg:pt-28 lg:pb-12 px-4 mb-0">
-          <div className="text-center w-full p-2 bg-white rounded-lg shadow-lg mb-4">
-            <h1 className="title mb-4 text-3xl color-gray-light font-bold">Analítica Emergencias Comunitarias</h1>
+        <div className="w-full h-full bg-gray-100 pt-16 lg:pt-28 lg:pb-12 px-4 mb-0">
+          <div className="text-center w-full px-4 py-4 bg-white rounded-lg shadow-lg mb-4">
+            <h1 className="title text-3xl color-gray-light font-bold">Analítica Emergencias Comunitarias</h1>
           </div>
           <div className="flex flex-col lg:flex-row w-full gap-2 lg:gap-6 mb-4">
             <div className="w-full xl:w-1/4 bg-color-primary rounded-lg px-4 shadow-lg flex items-center">
@@ -941,7 +935,7 @@ const ReportsPage = () => {
             </div>
           </div>
           <div className="w-full flex flex-col-reverse lg:flex-row gap-6">
-            <div className="w-full md:w-1/2 2xl:w-2/3">
+            <div className="w-full sm:w-full lg:w-1/2 2xl:w-2/3">
               <div className="flex flex-col lg:flex-row w-full gap-2 lg:gap-6 mb-4">
                 <div className="w-full lg:w-1/3">
                   <button onClick={descargarPDF} className="bg-red-500 w-full h-full text-white px-4 py-2 rounded-lg hover:scale-110 transition-all shadow-lg">
@@ -977,27 +971,27 @@ const ReportsPage = () => {
                 </div>
               </div>
               <div className="flex flex-col w-full gap-6">
-                <div className="w-full bg-color-primary rounded-lg shadow-lg p-4" style={{ height: "400px"}}>
+                <div className="w-full bg-color-primary rounded-lg shadow-lg p-4" style={{ height: "400px" }}>
                   <h1 className="text-center text-blue-800 text-lg font-semibold mb-2">Mapa de calor de publicaciones</h1>
                   <Chart options={heatmapOptions} series={heatmapData} type="heatmap" width="90%" height="85%" />
                 </div>
-                <div className="w-full bg-color-primary rounded-lg shadow-lg p-4" style={{ height: "475px"}}>
+                <div className="w-full bg-color-primary rounded-lg shadow-lg p-4" style={{ height: "475px" }}>
                   <h1 className="text-center text-blue-800 text-lg font-semibold mb-2">Ubicación exacta de las publicaciones</h1>
                   <Map coordinates={coordenadas} />
                 </div>
               </div>
               <div className="flex flex-col w-full gap-6 mt-4">
-                <div className="w-full bg-color-primary rounded-lg shadow-lg p-4" style={{ height: "400px"}}>
+                <div className="w-full bg-color-primary rounded-lg shadow-lg p-4" style={{ height: "400px" }}>
                   <h1 className="text-center text-blue-800 text-lg font-semibold mb-2">Gráfico lineal de emergencias</h1>
-                  <Chart options={optionsBarras} series={dataBarras} type="line" width="100%" height="85%"/>
+                  <Chart options={optionsBarras} series={dataBarras} type="line" width="100%" height="85%" />
                 </div>
-                <div className="w-full bg-color-primary rounded-lg shadow-lg p-4" style={{ height: "500px"}}>
+                <div className="w-full bg-color-primary rounded-lg shadow-lg p-4" style={{ height: "500px" }}>
                   <h1 className="text-center text-blue-800 text-lg font-semibold mb-2">Gráfico de barras</h1>
-                  <Chart options={heatmapOptionsPie} series={dataPastel} type="bar" width="100%" height="85%"/>
+                  <Chart options={heatmapOptionsPie} series={dataPastel} type="bar" width="100%" height="85%" />
                 </div>
               </div>
             </div>
-            <div className="w-full md:w-1/2 2xl:w-1/3 relative">
+            <div className="w-full sm:w-full lg:w-1/2 2xl:w-1/3 relative">
               <div className="sticky top-0 left-0 w-full">
                 <div className="flex flex-col w-full px-8 py-4 bg-color-primary rounded-lg shadow-lg overflow-x-auto">
                   <h1 className="text-blue-800 text-lg font-semibold mb-2">Filtros</h1>

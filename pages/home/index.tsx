@@ -154,7 +154,7 @@ const HomePage = () => {
                       <div className="flex flex-row justify-center items-center space-x-4 mt-4">
                         {/* agregar bordes al rededor */}
                         <Link
-                          href={"#"}
+                          href={"https://play.google.com/store/apps/details?id=com.vinicioborja.flutter_maps_adv"}
                           className="flex flex-row justify-center items-center space-x-2   border-2 border-solid border-color-gray rounded-lg p-2 w-44 hover:border-color-secondary hover:scale-110  hover:bg-color-secondary hover:text-white duration-200 ease-in"
                         >
                           <div>

@@ -107,7 +107,7 @@ const FilosofiaPage = () => {
         <section className="bg-color-white">
 
           <div className="pt-28">
-            <div className="flex flex-col items-center justify-center gap-4 px-6 fade-in">\
+            <div className="flex flex-col items-center justify-center gap-4 px-6 fade-in">
               <div className="overflow-hidden">
                 <Image width={260} height={250} className="move-in" src="/SeguridadESPE/images/espe.png" alt="espe" />
               </div>

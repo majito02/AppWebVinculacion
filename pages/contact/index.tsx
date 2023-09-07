@@ -181,7 +181,7 @@ const ContactPage = () => {
           error: ""
         })
         // Tienes que cambiar esta direccion a donde vaya a quedar alojado tu backend
-        let response = await fetch("http://10.3.0.251:3000/api/email/send", {
+        let response = await fetch("http://192.188.58.82:3000/api/email/send", {
           method: "POST",
           headers: {
             "Content-Type": "application/json;charset=utf-8",
@@ -229,16 +229,16 @@ const ContactPage = () => {
             </div>
           </div>}
 
-          <div className="w-full h-full px-0 md:px-20 lg:px-10 flex flex-col lg:flex-row justify-end items-center relative overflow-hidden fade-in">
-            <div className="w-full h-full max-h-screen absolute flex justify-center left-0 top-0">
+          <div className="w-full h-full px-0 lg:px-10 flex flex-col lg:flex-row justify-end items-center relative overflow-hidden fade-in">
+            <div className="w-full h-full max-h-screen lg:absolute flex justify-center lg:left-0 lg:top-0">
               <Image
                 width={1920}
                 height={1080}
-                src="/SeguridadESPE/images/espec2.jpeg"
+                src="/SeguridadESPE/images/espec2c.jpeg"
                 className="object-cover object-center"
                 alt="Persona 1" />
             </div>
-            <div className="w-full h-full lg:w-1/3 py-10 lg:py-20 z-10 lg:mr-10">
+            <div className="w-full h-full lg:w-1/3 lg:py-20 z-10 lg:mr-10">
               <div className="w-full h-full flex justify-center items-center">
                 <div className="gray-faded shadow-lg rounded-lg p-4 lg:p-10">
                   <div className="fade-in">
@@ -454,7 +454,7 @@ const ContactPage = () => {
                       <EnvelopeOpenIcon className="h-14 w-14 text-color-secundario mb-4" aria-hidden="true" />
                       <div className="text-center">
                         <p className="text-color-secundario font-bold">Correo electrónico</p>
-                        <p className="text-gray-700 text-sm">lacastillo12@esp.edu.ec</p>
+                        <p className="text-gray-700 text-sm">lacastillo12@espe.edu.ec</p>
                       </div>
                     </div>
                   </div>
